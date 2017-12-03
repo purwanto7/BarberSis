@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="584.0" prefWidth="767.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="barbersis.FXMLBerandaController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <ImageView fitHeight="584.0" fitWidth="768.0" layoutX="-1.0">
+         <image>
+            <Image url="@../../gambar/img3906.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="374.0" layoutY="14.0" prefHeight="554.0" prefWidth="379.0" style="-fx-background-color: #dbdbdb;">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="200.0" layoutX="90.0">
+               <image>
+                  <Image url="@../../gambar/barb.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="58.0" layoutY="132.0" prefHeight="8.0" prefWidth="265.0" />
+            <Label layoutX="83.0" layoutY="110.0" text="Potongan">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="245.0" layoutY="112.0" text="Harga">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="249.0" layoutY="145.0" prefHeight="21.0" prefWidth="35.0" text="8000">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="249.0" layoutY="167.0" prefHeight="21.0" prefWidth="35.0" text="9000">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="245.0" layoutY="213.0" prefHeight="21.0" prefWidth="51.0" text="12000">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="245.0" layoutY="190.0" prefHeight="21.0" prefWidth="51.0" text="10000">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="58.0" layoutY="270.0" prefHeight="8.0" prefWidth="265.0" />
+            <Label layoutX="83.0" layoutY="250.0" text="Tambahan">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="245.0" layoutY="252.0" text="Harga">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="249.0" layoutY="279.0" prefHeight="21.0" prefWidth="35.0" text="2000">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="249.0" layoutY="303.0" prefHeight="21.0" prefWidth="35.0" text="3000">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <JFXRadioButton fx:id="pot1" layoutX="74.0" layoutY="145.0" text="3 2 1">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="potong" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="pot2" layoutX="74.0" layoutY="167.0" text="2 1 0" toggleGroup="$potong">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="pot3" layoutX="74.0" layoutY="190.0" text="1 1 1" toggleGroup="$potong">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="pot4" layoutX="74.0" layoutY="213.0" text="Plontos" toggleGroup="$potong">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXButton fx:id="btnHitung" layoutX="44.0" layoutY="360.0" onAction="#hitung" prefHeight="31.0" prefWidth="190.0" style="-fx-background-color: #5a5a5a;" text="HITUNG" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXTextArea fx:id="tekarea" editable="false" layoutX="189.0" layoutY="406.0" maxWidth="200.0" minWidth="147.0" prefHeight="121.0" prefWidth="157.0" wrapText="true" />
+            <JFXTextField fx:id="total" editable="false" focusColor="#4d4d4d" layoutX="92.0" layoutY="411.0" maxWidth="94.0" minWidth="94.0" prefHeight="31.0" prefWidth="94.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="bayar" focusColor="#4d4d4d" layoutX="92.0" layoutY="445.0" maxWidth="94.0" minWidth="94.0" prefHeight="31.0" prefWidth="94.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></JFXTextField>
+            <JFXButton fx:id="btnDetail" layoutX="45.0" layoutY="489.0" onAction="#detail" prefHeight="31.0" prefWidth="133.0" style="-fx-background-color: #5a5a5a;" text="DETAIL" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="45.0" layoutY="416.0" text="Total">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="448.0" text="Bayar">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnHapus" layoutX="249.0" layoutY="360.0" onAction="#hapus" prefHeight="31.0" prefWidth="94.0" style="-fx-background-color: #5a5a5a;" text="HAPUS" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXRadioButton fx:id="pot5" layoutX="74.0" layoutY="279.0" text="Kumis">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="tambah" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="pot6" layoutX="74.0" layoutY="303.0" text="Jenggot" toggleGroup="$tambah">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXRadioButton>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>
